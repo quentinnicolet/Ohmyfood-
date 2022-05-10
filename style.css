@@ -1,3 +1,86 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
 
+footer #footer-logo {
+  font-family: "Shrikhand", cursive;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+p {
+  font-size: 18px;
+}
+
+header .logo, header form {
+  display: flex;
+  justify-content: center;
+}
+header form {
+  padding: 1em 1em 1em 6em;
+  background-color: #d6d6d6;
+}
+header input {
+  border: none;
+  margin-left: 0.5em;
+  font-size: 18px;
+  font-weight: 500;
+  background: none;
+}
+
+#intro {
+  padding: 3em;
+  background-color: wheat;
+}
+#intro h1 {
+  font-size: 2vh;
+  font-weight: 600;
+}
+#intro #ancre-btn {
+  text-decoration: none;
+  border-radius: 3em;
+  color: #fff;
+  background-color: #9356DC;
+  padding: 1em 1.5em;
+}
+
+#fonctionnement div .conteneur-fonctionnement {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#restaurants figure {
+  border-radius: 1em;
+  overflow: hidden;
+}
+#restaurants figure img {
+  object-fit: cover;
+  width: 100%;
+}
+
+footer {
+  background-color: grey;
+  color: #fff;
+  padding: 1em 2em;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer ul {
+  padding-inline: 0;
+}
+footer li {
+  list-style: none;
+  list-style-type: none;
+  color: #fff;
+  padding-bottom: 3px;
+}
 
 /*# sourceMappingURL=style.css.map */
