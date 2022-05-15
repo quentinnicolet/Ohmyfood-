@@ -13,14 +13,14 @@
   </head>
   
 
-  <body>
+  <body id="home">
       <header>
         <figure class="logo">
           <img src="images/logo/ohmyfood@2x.svg" alt="Logo">
         </figure>
         <form action="#" method="post" id="localisation"> <!--Update action to input ?? -->
           <i class="fas fa-map-marker-alt maps"></i>
-          <input type="text" placeholder="Paris, Belleville">
+          <input id="lieux" type="text" placeholder="Paris, Belleville">
         </form>
       </header>
 
@@ -28,7 +28,7 @@
         <section id="intro">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvre des restaurants d'exception, sélectionnés par nos soins.</p>
-            <a href="#ancre-restaurants" id="ancre-btn">Explorer nos restaurants</a>
+            <a href="#ancre-restaurants" id="btn">Explorer nos restaurants</a>
         </section>      
         
         <section id="fonctionnement">
@@ -56,67 +56,69 @@
 
         <section id="restaurants">
           <h2 id="ancre-restaurants">Restaurants</h2>
-          <a href="#" class="conteneur-restaurants">
-            <figure>
+
+          <figure>
+            <a href="pages/La_palette_du_gout.html" class="conteneur-restaurants">
               <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
               <div class="nouveau">
                 <p>Nouveau</p>
-              </div>
+              </div>          
+            </a>
               <figcaption>
                 <h3>La palette du goût</h3>
                 <p>Ménilmont</p>
                 <div class="restaurants-picto">
                   <i class="fa fa-heart"></i>
-                  <i class="fa fa-heart"></i>
+                  <i class="fa fa-heart plein"></i>
                 </div>              
               </figcaption>
-            </figure>
-          </a>
+          </figure>
 
-          <a href="" class="conteneur-restaurants">
-            <figure>
-              <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-              <div class="nouveau">
-                <p>Nouveau</p>
-              </div>
+          
+          <figure>
+              <a href="pages/La_note_enchantee.html" class="conteneur-restaurants">
+                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                <div class="nouveau">
+                  <p>Nouveau</p>
+                </div>
+              </a>
               <figcaption>
                 <h3>La note enchantée</h3>
                 <p>Charonne</p>
                 <div class="restaurants-picto">
                   <i class="fa fa-heart"></i>
-                  <i class="fa fa-heart"></i>
+                  <i class="fa fa-heart plein"></i>
                 </div>              
               </figcaption>
-            </figure>
-          </a>
+          </figure>
 
-          <a href="" class="conteneur-restaurants">
-            <figure>
-              <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
+          <figure>
+              <a href="pages/A_la_francaise.html" class="conteneur-restaurants">
+                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
+              </a>
               <figcaption>
                 <h3>A la francaise</h3>
                 <p>Cité Rouge</p>
                 <div class="restaurants-picto">
                   <i class="fa fa-heart"></i>
-                  <i class="fa fa-heart"></i>
+                  <i class="fa fa-heart plein"></i>
                 </div> 
               </figcaption>
-            </figure>
-          </a>
+          </figure>
 
-          <a href="" class="conteneur-restaurants">
-            <figure>
+          <figure>
+            <a href="pages/Le_delice_des_sens.html" class="conteneur-restaurants">
               <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+            </a>
               <figcaption>
                 <h3>Le délice des sens</h3>
                 <p>Folie-Méricourt</p>
                 <div class="restaurants-picto">
                   <i class="fa fa-heart"></i>
-                  <i class="fa fa-heart"></i>
+                  <i class="fa fa-heart plein"></i>
                 </div>               
               </figcaption>
-            </figure>
-          </a>
+          </figure>
 
         </section>
       </main>

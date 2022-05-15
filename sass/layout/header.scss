@@ -1,0 +1,23 @@
+header{
+    box-shadow: 1em 1em rgb(0 0 0 / 25%);
+
+    .logo, form{
+        display: flex;
+        justify-content: center;
+    }
+    form{
+        padding: 1em 1em 1em 6em;
+        background-color: #f3f3f3;
+    }
+    input{
+        border: none;
+        margin-left: 0.5em;
+        font-size: 18px;
+        font-weight: 500;      
+        background: none;
+
+        #lieux{
+            color: #000;
+        }
+    }
+}
