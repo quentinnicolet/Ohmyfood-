@@ -1,1 +1,116 @@
-@import "home.scss"
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 18px;
+}
+
+#menu main{
+
+    figure{
+        margin: 0;
+
+        img{
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        margin-top: -4rem;
+        border-radius: 2rem 2rem 0 0;
+        background-color: #f6f6f6;
+        position: relative;
+        padding: 5%;
+
+        div.page-picto{
+            display: flex;
+            justify-content: flex-end;
+            mix-blend-mode: darken;
+            margin-top: -3em;
+
+            .fa.fa-heart{
+                font-weight: 400;
+                color: #000;
+                font-size: 24px;
+                cursor: pointer;
+                position: absolute;
+            }
+            .fa.fa-heart.plein{
+                color: #dfa1e0;
+                font-weight: 900;
+            }
+        }
+        div.menu{
+            display: flex;
+            flex-direction: column;
+            margin-top: 2em;
+
+            h2{
+
+                text-transform: uppercase;
+                font-weight: 400;
+                border-width: 0 0 5px 0;
+                border-style: solid;
+                border-color: #99e2d0;
+                padding-bottom: 10px;
+                width: 50px;
+                font-size: 19px;            
+            }
+            div.conteneur-menu{
+                border-radius: 10px;
+                box-shadow: 3px 6px 6px rgb(0 0 0 / 25%);
+                padding: 1em;
+
+                p{
+                    font-weight: 300;
+                }
+
+                p, h3{
+                    margin: 5px 0 0 0;
+                    overflow: hidden;
+                }
+                .prix{
+                    margin: -20px 0 0 0;
+                    font-weight: 700;
+                }
+                .prix, .picto-animation{
+                    display: flex;
+                    justify-content: end;
+                }
+            }
+        }
+        div#menu-btn{
+            display: flex;
+            justify-content: center;
+            margin-top: 3em;
+        }   
+    }
+}
+
+@media (min-width: 768px){
+    section{
+        flex-direction: inherit !important;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        h1, #page-picto, div#menu-btn{
+            width: 100%;
+        }
+
+        div.menu{
+            width: 45%;
+            margin: 0;
+        }
+        
+    }
+}
+
+@media (min-width: 1027px){
+    div.menu{
+        width: 30% !important;
+    }
+}

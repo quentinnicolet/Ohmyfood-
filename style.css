@@ -2,7 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-footer #footer-logo {
+footer #footer-logo, #titre-menu {
   font-family: "Shrikhand", cursive;
 }
 
@@ -12,6 +12,7 @@ footer #footer-logo {
   padding: 1em 1.5em;
   color: #fff;
   text-decoration: none;
+  box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
 footer {
@@ -22,6 +23,7 @@ footer {
 footer a {
   text-decoration: none;
   color: #fff;
+  font-size: 20px;
 }
 footer ul {
   padding-inline: 0;
@@ -33,8 +35,29 @@ footer li {
   padding-bottom: 3px;
 }
 
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5% 0 5%;
+  }
+  footer #footer-logo {
+    font-size: 2.5em;
+  }
+}
 header {
+  display: flex;
+  justify-content: center;
   box-shadow: 1em 1em rgba(0, 0, 0, 0.25);
+  align-items: center;
+}
+header#home {
+  flex-direction: column;
+}
+header i {
+  color: #000;
+  font-size: 20px;
 }
 header .logo, header form {
   display: flex;
@@ -60,29 +83,26 @@ body {
   margin: 0;
   padding: 0;
   color: #000;
-}
-
-p {
   font-size: 18px;
 }
 
-#fonctionnement, #restaurants {
+#home main #fonctionnement, #home main #restaurants {
   padding: 0 2% 0 2%;
 }
-
-#intro {
+#home main #intro {
   padding: 3em;
   background-color: #f6f6f6;
+  text-align: center;
 }
-#intro h1 {
+#home main #intro h1 {
   font-size: 4vh;
   font-weight: 600;
 }
-#intro p {
-  font-size: 3vh;
+#home main #intro p {
+  font-size: 19px;
+  margin-bottom: 3em;
 }
-
-#fonctionnement div .conteneur-fonctionnement {
+#home main #fonctionnement div .conteneur-fonctionnement {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -93,11 +113,12 @@ p {
   margin: 1rem;
   border-radius: 20px;
   position: relative;
+  box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.15);
 }
-#fonctionnement div .conteneur-fonctionnement:hover {
-  background-color: #9356DC;
+#home main #fonctionnement div .conteneur-fonctionnement:hover {
+  background-color: #dfa1e0 !important;
 }
-#fonctionnement div .conteneur-fonctionnement .chiffre {
+#home main #fonctionnement div .conteneur-fonctionnement .chiffre {
   position: absolute;
   left: 0;
   width: 20px;
@@ -109,22 +130,21 @@ p {
   border-radius: 50%;
   margin-left: -1em;
 }
-#fonctionnement div .conteneur-fonctionnement i {
+#home main #fonctionnement div .conteneur-fonctionnement i {
   padding-right: 30px;
   padding-left: 1em;
   color: #7e7e7e;
 }
-#fonctionnement div .conteneur-fonctionnement:hover {
+#home main #fonctionnement div .conteneur-fonctionnement:hover {
   color: #9356DC;
 }
-
-#restaurants figure {
+#home main #restaurants figure {
   border-radius: 1em;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.25);
 }
-#restaurants figure .nouveau {
+#home main #restaurants figure .nouveau {
   position: absolute;
   right: 60px;
   bottom: -190px;
@@ -133,94 +153,185 @@ p {
   padding: 5px;
   border-radius: 10px;
 }
-#restaurants figure img {
+#home main #restaurants figure img {
   object-fit: cover;
   width: 100%;
-  height: 40vw;
+  height: 30vw;
+}
+#home main #restaurants figcaption {
+  margin: 0 0 4em 1em;
+}
+#home main #restaurants figcaption h3 {
+  margin: 1em 0 0.5em 0;
+}
+#home main #restaurants figcaption p {
+  margin: 0;
+}
+#home main #restaurants figcaption .restaurants-picto {
+  display: flex;
+  justify-content: flex-end;
+  mix-blend-mode: darken;
+  margin-top: -3em;
+}
+#home main #restaurants figcaption .restaurants-picto .fa.fa-heart {
+  font-weight: 400;
+  color: #000;
+  font-size: 2em;
+  cursor: pointer;
+  position: absolute;
+  margin-right: 20px;
+}
+#home main #restaurants figcaption .restaurants-picto .fa.fa-heart.plein {
+  color: #dfa1e0;
+  font-weight: 900;
 }
 
+@media (min-width: 768px) and (max-width: 1026px) {
+  #fonctionnement div {
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+  }
+  #fonctionnement div a.conteneur-fonctionnement {
+    width: 50%;
+  }
+
+  #restaurants {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #restaurants h2 {
+    width: 100%;
+  }
+  #restaurants figure {
+    width: 39%;
+  }
+}
+@media (min-width: 1027px) {
+  #fonctionnement div {
+    display: flex;
+    justify-content: space-around;
+  }
+  #fonctionnement div a.conteneur-fonctionnement {
+    min-width: 25%;
+  }
+
+  #restaurants {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #restaurants h2 {
+    width: 100%;
+  }
+  #restaurants figure {
+    width: 25%;
+  }
+  #restaurants figure a.conteneur-restaurants img {
+    height: 15vw !important;
+  }
+}
 body {
   width: 100%;
   margin: 0;
   padding: 0;
   color: #000;
-}
-
-p {
   font-size: 18px;
 }
 
-#fonctionnement, #restaurants {
-  padding: 0 2% 0 2%;
+#menu main figure {
+  margin: 0;
 }
-
-#intro {
-  padding: 3em;
-  background-color: #f6f6f6;
+#menu main figure img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
 }
-#intro h1 {
-  font-size: 4vh;
-  font-weight: 600;
-}
-#intro p {
-  font-size: 3vh;
-}
-
-#fonctionnement div .conteneur-fonctionnement {
+#menu main section {
   display: flex;
-  align-items: center;
-  text-decoration: none;
-  flex-wrap: wrap;
-  color: #000;
+  flex-direction: column;
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
   background-color: #f6f6f6;
-  padding: 20px;
-  margin: 1rem;
-  border-radius: 20px;
   position: relative;
+  padding: 5%;
 }
-#fonctionnement div .conteneur-fonctionnement:hover {
-  background-color: #9356DC;
+#menu main section div.page-picto {
+  display: flex;
+  justify-content: flex-end;
+  mix-blend-mode: darken;
+  margin-top: -3em;
 }
-#fonctionnement div .conteneur-fonctionnement .chiffre {
+#menu main section div.page-picto .fa.fa-heart {
+  font-weight: 400;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
   position: absolute;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  padding: 5px;
-  background-color: #9356DC;
-  color: #fff;
-  border-radius: 50%;
-  margin-left: -1em;
 }
-#fonctionnement div .conteneur-fonctionnement i {
-  padding-right: 30px;
-  padding-left: 1em;
-  color: #7e7e7e;
+#menu main section div.page-picto .fa.fa-heart.plein {
+  color: #dfa1e0;
+  font-weight: 900;
 }
-#fonctionnement div .conteneur-fonctionnement:hover {
-  color: #9356DC;
+#menu main section div.menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
 }
-
-#restaurants figure {
-  border-radius: 1em;
-  overflow: hidden;
+#menu main section div.menu h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  border-width: 0 0 5px 0;
+  border-style: solid;
+  border-color: #99e2d0;
+  padding-bottom: 10px;
+  width: 50px;
+  font-size: 19px;
+}
+#menu main section div.menu div.conteneur-menu {
   border-radius: 10px;
   box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.25);
+  padding: 1em;
 }
-#restaurants figure .nouveau {
-  position: absolute;
-  right: 60px;
-  bottom: -190px;
-  background-color: #99e2d0;
-  color: #1f997c;
-  padding: 5px;
-  border-radius: 10px;
+#menu main section div.menu div.conteneur-menu p {
+  font-weight: 300;
 }
-#restaurants figure img {
-  object-fit: cover;
-  width: 100%;
-  height: 40vw;
+#menu main section div.menu div.conteneur-menu p, #menu main section div.menu div.conteneur-menu h3 {
+  margin: 5px 0 0 0;
+  overflow: hidden;
+}
+#menu main section div.menu div.conteneur-menu .prix {
+  margin: -20px 0 0 0;
+  font-weight: 700;
+}
+#menu main section div.menu div.conteneur-menu .prix, #menu main section div.menu div.conteneur-menu .picto-animation {
+  display: flex;
+  justify-content: end;
+}
+#menu main section div#menu-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+@media (min-width: 768px) {
+  section {
+    flex-direction: inherit !important;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  section h1, section #page-picto, section div#menu-btn {
+    width: 100%;
+  }
+  section div.menu {
+    width: 45%;
+    margin: 0;
+  }
+}
+@media (min-width: 1027px) {
+  div.menu {
+    width: 30% !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
