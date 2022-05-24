@@ -1,12 +1,8 @@
 header{
     display: flex;
     justify-content: center;
-    box-shadow: 1em 1em rgb(0 0 0 / 25%);
+    box-shadow: 0 1em rgb(0 0 0 / 25%);
     align-items: center;
-
-    &#home{
-        flex-direction: column;
-    }
     i{
     color: #000;
     font-size: 20px;
@@ -16,8 +12,10 @@ header{
         justify-content: center;
     }
     form{
-        padding: 1em 1em 1em 6em;
+        width: 100%;
+        padding: 1em 0 1em 0;
         background-color: #f3f3f3;
+        width: 100%;
     }
     input{
         border: none;
@@ -29,5 +27,8 @@ header{
         #lieux{
             color: #000;
         }
+    }
+    #home &{
+        flex-direction: column !important;
     }
 }
