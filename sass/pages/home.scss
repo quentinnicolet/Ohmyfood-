@@ -47,7 +47,13 @@ body{
             box-shadow: 3px 6px 6px rgb(0 0 0 / 15%);
 
                 &:hover{
-                    background-color: #dfa1e0 !important;
+                    transition: all 1s;
+                    background-color: #ffdef6;
+                    box-shadow: 6px 9px 9px rgb(0 0 0 / 25%);
+
+                    i{
+                        color: #9356DC;
+                    }  
                 }
 
             .chiffre{
@@ -68,9 +74,6 @@ body{
                 padding-left: 1em;
                 color: #7e7e7e;
             }
-                &:hover{
-                    color: #9356DC;
-                }  
         }
     }
 
@@ -118,7 +121,6 @@ body{
             .restaurants-picto{
                 display: flex;
                 justify-content: flex-end;
-                mix-blend-mode: darken;
                 margin-top: -3em;
 
                 .fa.fa-heart{
@@ -130,8 +132,15 @@ body{
                     margin-right: 20px;
                 }
                 .fa.fa-heart.plein{
-                    color: #dfa1e0;
+                    color: #dfa1e0 !important;
                     font-weight: 900;
+                    opacity: 0;
+
+                    &:hover{
+                        opacity: 1;
+                        background: #fff;
+                        transition: all 1s ease-out;
+                    }
                 }
 
             }

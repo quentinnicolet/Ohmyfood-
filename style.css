@@ -14,6 +14,11 @@ footer #footer-logo, #titre-menu {
   text-decoration: none;
   box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.25);
 }
+#btn:hover {
+  transition: all 1s;
+  background: linear-gradient(to top, #FF79DA, #ffabe7);
+  box-shadow: 6px 9px 9px rgba(0, 0, 0, 0.35);
+}
 
 footer {
   background-color: #353535;
@@ -125,7 +130,12 @@ body {
   box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.15);
 }
 #home main #fonctionnement div .conteneur-fonctionnement:hover {
-  background-color: #dfa1e0 !important;
+  transition: all 1s;
+  background-color: #ffdef6;
+  box-shadow: 6px 9px 9px rgba(0, 0, 0, 0.25);
+}
+#home main #fonctionnement div .conteneur-fonctionnement:hover i {
+  color: #9356DC;
 }
 #home main #fonctionnement div .conteneur-fonctionnement .chiffre {
   position: absolute;
@@ -143,9 +153,6 @@ body {
   padding-right: 30px;
   padding-left: 1em;
   color: #7e7e7e;
-}
-#home main #fonctionnement div .conteneur-fonctionnement:hover {
-  color: #9356DC;
 }
 #home main #restaurants figure {
   margin: 1em;
@@ -184,7 +191,6 @@ body {
 #home main #restaurants figcaption .restaurants-picto {
   display: flex;
   justify-content: flex-end;
-  mix-blend-mode: darken;
   margin-top: -3em;
 }
 #home main #restaurants figcaption .restaurants-picto .fa.fa-heart {
@@ -196,8 +202,14 @@ body {
   margin-right: 20px;
 }
 #home main #restaurants figcaption .restaurants-picto .fa.fa-heart.plein {
-  color: #dfa1e0;
+  color: #dfa1e0 !important;
   font-weight: 900;
+  opacity: 0;
+}
+#home main #restaurants figcaption .restaurants-picto .fa.fa-heart.plein:hover {
+  opacity: 1;
+  background: #fff;
+  transition: all 1s ease-out;
 }
 
 @media (min-width: 768px) and (max-width: 1026px) {
@@ -282,10 +294,17 @@ body {
   font-size: 24px;
   cursor: pointer;
   position: absolute;
+  margin-right: 20px;
 }
 #menu main section div.page-picto .fa.fa-heart.plein {
-  color: #dfa1e0;
+  color: #dfa1e0 !important;
   font-weight: 900;
+  opacity: 0;
+}
+#menu main section div.page-picto .fa.fa-heart.plein:hover {
+  opacity: 1;
+  transition: all 1s ease-out;
+  background: #fff;
 }
 #menu main section div.menu {
   display: flex;
