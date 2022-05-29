@@ -74,6 +74,7 @@ body{
                 padding: 1em;
                 animation-duration: 3s;
                 animation-name: conteneur-menu;
+                overflow: hidden;
             
                 @keyframes conteneur-menu {
                     from {
@@ -102,8 +103,9 @@ body{
                     overflow: hidden;
                     text-align: center;
                     align-items: center;
-                    transition: width 1s;
-                    padding-top: 25px;
+                    font-size: 25px;
+                    float: right;
+
                 }
             }
         }
