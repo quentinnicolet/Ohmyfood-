@@ -325,21 +325,37 @@ body {
   border-radius: 10px;
   box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.25);
   padding: 1em;
+  animation-duration: 3s;
+  animation-name: conteneur-menu;
 }
-#menu main section div.menu div.conteneur-menu p {
+@keyframes conteneur-menu {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+#menu main section div.menu div.conteneur-menu .description-menu {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#menu main section div.menu div.conteneur-menu .description-menu p {
   font-weight: 300;
 }
-#menu main section div.menu div.conteneur-menu p, #menu main section div.menu div.conteneur-menu h3 {
+#menu main section div.menu div.conteneur-menu .description-menu p, #menu main section div.menu div.conteneur-menu .description-menu h3 {
   margin: 5px 0 0 0;
   overflow: hidden;
 }
-#menu main section div.menu div.conteneur-menu .prix {
-  margin: -20px 0 0 0;
-  font-weight: 700;
-}
-#menu main section div.menu div.conteneur-menu .prix, #menu main section div.menu div.conteneur-menu .picto-animation {
-  display: flex;
-  justify-content: end;
+#menu main section div.menu div.conteneur-menu .picto-animation {
+  color: #f6f6f6;
+  background-color: #99e2d0;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  transition: width 1s;
+  padding-top: 25px;
 }
 #menu main section div#menu-btn {
   display: flex;

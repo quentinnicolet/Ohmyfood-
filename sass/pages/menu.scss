@@ -72,22 +72,38 @@ body{
                 border-radius: 10px;
                 box-shadow: 3px 6px 6px rgb(0 0 0 / 25%);
                 padding: 1em;
-
-                p{
-                    font-weight: 300;
+                animation-duration: 3s;
+                animation-name: conteneur-menu;
+            
+                @keyframes conteneur-menu {
+                    from {
+                        opacity: 0;
+                        transform: translateY(100%);
+                    }
+                    to { opacity: 1 }
                 }
-
-                p, h3{
-                    margin: 5px 0 0 0;
+    
+                .description-menu{
+                    text-overflow: ellipsis;
                     overflow: hidden;
+
+                    p{
+                        font-weight: 300;
+                    }
+    
+                    p, h3{
+                        margin: 5px 0 0 0;
+                        overflow: hidden;
+                    }
                 }
-                .prix{
-                    margin: -20px 0 0 0;
-                    font-weight: 700;
-                }
-                .prix, .picto-animation{
-                    display: flex;
-                    justify-content: end;
+                .picto-animation{
+                    color: #f6f6f6;
+                    background-color: #99e2d0;              
+                    overflow: hidden;
+                    text-align: center;
+                    align-items: center;
+                    transition: width 1s;
+                    padding-top: 25px;
                 }
             }
         }
