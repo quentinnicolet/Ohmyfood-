@@ -24,12 +24,11 @@ body{
         border-radius: 2rem 2rem 0 0;
         background-color: #f6f6f6;
         position: relative;
-        padding: 5%;
+        padding: 5em 5%;
 
         div.page-picto{
             display: flex;
             justify-content: flex-end;
-            mix-blend-mode: darken;
             margin-top: -3em;
 
             .fa.fa-heart{
@@ -69,12 +68,18 @@ body{
                 font-size: 19px;            
             }
             div.conteneur-menu{
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
                 border-radius: 10px;
                 box-shadow: 3px 6px 6px rgb(0 0 0 / 25%);
                 padding: 1em;
                 animation-duration: 3s;
                 animation-name: conteneur-menu;
                 overflow: hidden;
+                height: 60px;
+                margin-bottom: 1em;
+
             
                 @keyframes conteneur-menu {
                     from {
@@ -87,6 +92,7 @@ body{
                 .description-menu{
                     text-overflow: ellipsis;
                     overflow: hidden;
+                    white-space: nowrap;
 
                     p{
                         font-weight: 300;
@@ -95,26 +101,55 @@ body{
                     p, h3{
                         margin: 5px 0 0 0;
                         overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
+
+                .prix{
+                    margin: 0 5% 0 5%;
+                }
+
                 .picto-animation{
                     color: #f6f6f6;
-                    background-color: #99e2d0;              
+                    background-color: #99e2d0;
+                    font-size: 2em !important;              
                     overflow: hidden;
                     text-align: center;
                     align-items: center;
                     font-size: 25px;
                     float: right;
+                    object-fit: contain;
+                    height: 4em;
+                    display: flex;
+                    justify-content: center;
+                    margin: 0px -18px -40px 0px;
+                    width: 0%;
 
+                    i{
+                        transition: transform 1s;
+                        transform: rotate(0deg);                    
+                    }
+                }
+
+                &:hover{
+                    .picto-animation{
+                        width: 2em;
+                        transition: 1.5s;
+
+                        i{
+                                transform: rotate(360deg);
+                        }
+                    }
                 }
             }
+        }
+
         }
         div#menu-btn{
             display: flex;
             justify-content: center;
             margin-top: 3em;
         }   
-    }
 }
 
 @media (min-width: 768px){
@@ -130,6 +165,9 @@ body{
         div.menu{
             width: 45%;
             margin: 0;
+        }
+        div.page-picto{
+            margin-top: 1em !important;
         }
         
     }
