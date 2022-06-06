@@ -47,7 +47,10 @@ body{
                 &:hover{
                     opacity: 1;
                     transition: all 1s ease-out;
-                    background: #fff;
+                    background: linear-gradient(to top, #FF79DA, #ffabe7);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;                   
                 }
             }
         }
