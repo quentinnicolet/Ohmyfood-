@@ -412,6 +412,7 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  flex: 1;
 }
 #menu main section div.menu div.conteneur-menu .description-menu p {
   font-weight: 300;
