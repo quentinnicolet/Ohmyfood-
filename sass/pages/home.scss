@@ -36,7 +36,7 @@ body{
     position: absolute;
     width: 28.8px;
     height: 28.8px;
-    margin: 25% 50% 0 50%;
+    margin: 0 50% 50% 50%;
  }
  
  .spinner::before, .spinner::after {
@@ -212,7 +212,8 @@ body{
                         background: linear-gradient(to top, #FF79DA, #ffabe7);
                         background-clip: text;
                         -webkit-background-clip: text;
-                        color: transparent;                   
+                        color: transparent;
+                        transform: scale(1.07);                   
                     }
                 }
             }

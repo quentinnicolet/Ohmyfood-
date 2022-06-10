@@ -124,7 +124,7 @@ body {
   position: absolute;
   width: 28.8px;
   height: 28.8px;
-  margin: 25% 50% 0 50%;
+  margin: 0 50% 50% 50%;
 }
 .loader .spinner::before, .loader .spinner::after {
   --radius: 250;
@@ -273,6 +273,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  transform: scale(1.07);
 }
 
 @media (min-width: 768px) and (max-width: 1026px) {
@@ -370,6 +371,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  transform: scale(1.07);
 }
 #menu main section div.menu {
   display: flex;
@@ -458,6 +460,11 @@ body {
   margin-top: 3em;
 }
 
+@media (max-width: 345px) {
+  h1, #page-picto, div#menu-btn {
+    width: 75%;
+  }
+}
 @media (min-width: 768px) {
   section {
     flex-direction: inherit !important;

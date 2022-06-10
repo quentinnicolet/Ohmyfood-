@@ -50,7 +50,8 @@ body{
                     background: linear-gradient(to top, #FF79DA, #ffabe7);
                     background-clip: text;
                     -webkit-background-clip: text;
-                    color: transparent;                   
+                    color: transparent;
+                    transform: scale(1.07);                   
                 }
             }
         }
@@ -155,6 +156,14 @@ body{
             margin-top: 3em;
         }   
 }
+
+@media (max-width: 345px){
+
+        h1, #page-picto, div#menu-btn{
+            width: 75%;
+        }
+}
+
 
 @media (min-width: 768px){
     section{
