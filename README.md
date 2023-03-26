@@ -1,3 +1,4 @@
+# OH MY FOOD
 Welcome to OH MY FOOD, a cutting-edge project designed to bring a seamless and streamlined online reservation experience to restaurant-goers. Our mobile-first website is specifically tailored to meet the needs of today's tech-savvy diners, combining the latest development techniques with intuitive design to create a platform that is both efficient and easy to use.
 
 To achieve this goal, we have employed a variety of development techniques, including semantic HTML, a mobile-first approach, and CSS animations and transitions to enhance the user experience. We also employ intuitive navigation that makes it easy to find the restaurant that meets your needs, whether you're looking for a romantic dinner for two or a large family gathering.
